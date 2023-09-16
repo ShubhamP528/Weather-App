@@ -134,12 +134,12 @@ var lon;
 function showPosition(position){
   lat=position.coords.latitude;
   lon=position.coords.longitude;
-  $("li").remove();
   axios.get(`https://geocode.maps.co/reverse?lat=${lat}&lon=${lon}`)
   .then((fatchedData)=>{
     // console.log(fatchedData);
     city=fatchedData.data.address.city;
     // console.log(fatchedData.data.address.city);
+    $("li").remove();
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a30a244ffbf3a9eb6da22d4e4f973fd5&units=metric&exclude=hourly,daily`
     )

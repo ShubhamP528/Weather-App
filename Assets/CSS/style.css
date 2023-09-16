@@ -22,7 +22,7 @@ nav{
 }
 
 .container{
-    width: 800px;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,4 +98,5 @@ li div div {
     font-size:large;
     padding: 5px;
     border-radius: 3px;
+    cursor: pointer;
 }
